@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
 
         foreach($guards as $guard){
             if (Auth::guard($guard)->check() && Auth::user()->role == 1) {
-                return redirect()->route('admin.category.index');
+                return redirect()->route('admin.company-profile.index');
             } else {
                 return back();
             }
